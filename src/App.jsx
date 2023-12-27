@@ -8,6 +8,7 @@ import imgMobile from './assets/images/illustration-sign-up-mobile.svg'
 
 const App = () => {
    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+   const [data, setData] = useState([])
 
    useEffect(() => {
       const handleResize = () => {
