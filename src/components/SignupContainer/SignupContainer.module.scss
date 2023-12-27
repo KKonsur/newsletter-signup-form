@@ -1,17 +1,30 @@
+@import '../../variables.scss';
+
 .signupContainer {
    width: 55%;
    display: flex;
    flex-direction: column;
-   justify-content: center;
+   justify-content: space-evenly;
+   padding: 0 1rem;
 }
 
 .signupTextContainer {
-   &--list {
+   display: flex;
+   flex-direction: column;
+
+   &__heading {
+      font-size: 3.5rem;
+      color: $dark-slate-grey;
+      margin-bottom: 2rem;
+   }
+
+   &__list {
+      margin-top: 1rem;
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
    }
-   &--listItem {
+   &__listItem {
       list-style: none;
       display: flex;
       align-items: center;

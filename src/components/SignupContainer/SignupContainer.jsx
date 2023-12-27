@@ -6,12 +6,12 @@ const SignupContainer = () => {
    return (
       <section className={styles.signupContainer}>
          <div className={styles.signupTextContainer}>
-            <h1 className={styles['signupTextContainer--heading']}>Stay uptaded!</h1>
-            <p className={styles['signupTextContainer--paragraph']}>Join 60,000+ product managers receiving monthly updates on:</p>
-            <ul className={styles['signupTextContainer--list']}>
-               <li className={styles['signupTextContainer--listItem']}>Product discovery and building what matters</li>
-               <li className={styles['signupTextContainer--listItem']}>Measuring to ensure updates are a success</li>
-               <li className={styles['signupTextContainer--listItem']}>And much more!</li>
+            <h1 className={styles['signupTextContainer__heading']}>Stay uptaded!</h1>
+            <p className={styles['signupTextContainer__paragraph']}>Join 60,000+ product managers receiving monthly updates on:</p>
+            <ul className={styles['signupTextContainer__list']}>
+               <li className={styles['signupTextContainer__listItem']}>Product discovery and building what matters</li>
+               <li className={styles['signupTextContainer__listItem']}>Measuring to ensure updates are a success</li>
+               <li className={styles['signupTextContainer__listItem']}>And much more!</li>
             </ul>
          </div>
          <SignupForm />
