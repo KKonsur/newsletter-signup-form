@@ -6,6 +6,11 @@
    flex-direction: column;
    justify-content: space-evenly;
    padding: 0 1rem;
+   gap: 1rem;
+
+   @media (max-width: $mobile) {
+      width: 100%;
+   }
 }
 
 .signupTextContainer {
@@ -13,17 +18,27 @@
    flex-direction: column;
 
    &__heading {
-      font-size: 3.5rem;
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
       color: $dark-slate-grey;
       margin-bottom: 2rem;
+   }
+
+   &__paragraph {
+      font-size: clamp(0.7rem, 4vw, 1rem);
    }
 
    &__list {
       margin-top: 1rem;
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 0.7rem;
+      font-size: clamp(0.7rem, 4vw, 1rem);
+
+      @media (max-width: $mobile) {
+         margin-bottom: 1rem;
+      }
    }
+
    &__listItem {
       list-style: none;
       display: flex;

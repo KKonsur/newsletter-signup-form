@@ -8,9 +8,9 @@
    &__emailInput,
    &__submit {
       width: 100%;
-      padding: 1.2rem 1rem;
+      padding: clamp(0.8rem, 4vw, 1.2rem) 1rem;
       border-radius: 10px;
-      font-size: 1rem;
+      font-size: clamp(0.7rem, 4vw, 1rem);
    }
 
    &__emailInput {
@@ -34,5 +34,6 @@
 
    &__emailLabel {
       margin-bottom: 0.5rem;
+      font-weight: 700;
    }
 }

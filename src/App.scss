@@ -1,17 +1,38 @@
+@import './variables.scss';
+
 .app {
    background-color: #fff;
    box-shadow: 0px 0px 57px -6px rgba(0, 0, 0, 1);
-   width: 60vw;
+   width: clamp(400px, 60vw, 1000px);
    border-radius: 1rem;
    display: flex;
    gap: 2rem;
-   padding: 2rem;
+   padding: clamp(1rem, 2vw, 2rem);
+   color: $dark-slate-grey;
+
+   @media (max-width: $mobile) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      min-height: 100vh;
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+      border-radius: 0;
+      padding: 0 0 3rem 0;
+   }
 
    .mainImgContainer {
       width: 45%;
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @media (max-width:$mobile) {
+         width: 100%;
+      }
    }
 
    img {
