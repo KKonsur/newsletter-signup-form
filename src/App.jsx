@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react'
 import './index.js'
 import './index.scss'
 import './App.scss'
+import ThanksBox from './components/ThanksBox/ThanksBox.jsx'
 import SignupContainer from './components/SignupContainer/SignupContainer.jsx'
 import imgDekstop from './assets/images/illustration-sign-up-desktop.svg'
 import imgMobile from './assets/images/illustration-sign-up-mobile.svg'
 
 const App = () => {
    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-   const [data, setData] = useState([])
+   const [data, setData] = useState()
 
    useEffect(() => {
       const handleResize = () => {
@@ -23,14 +24,25 @@ const App = () => {
       }
    }, [])
 
+   const setDataHandler = (email) => {
+      setData(email)
+   }
+
+   const resetApp = () => {
+      setData()
+   }
+
    const img = windowWidth >= 500 ? imgDekstop : imgMobile
+   const appStyles = !data ? 'app' : 'app app--success'
 
    return (
-      <main className='app'>
-         <SignupContainer />
-         <section className='mainImgContainer'>
-            <img src={img} alt='' />
-         </section>
+      <main className={appStyles}>
+         {data ? <ThanksBox onReset={resetApp} email={data} /> : <SignupContainer onSetData={setDataHandler} />}
+         {!data && (
+            <section className='mainImgContainer'>
+               <img src={img} alt='' />
+            </section>
+         )}
       </main>
    )
 }

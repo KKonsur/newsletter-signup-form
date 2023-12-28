@@ -17,9 +17,10 @@
    &__emailInput {
       border: 1px solid $grey;
       outline: none;
-
+      
       &--invalid {
          border: 1px solid $tomato;
+         background-color: #ff62574e;
          color: $tomato;
 
          &::placeholder {
@@ -52,5 +53,16 @@
       position: absolute;
       right: 0;
       color: $tomato;
+      font-weight: 700;
+      animation: messageAnimation 0.15s 2;
+
+      @keyframes messageAnimation {
+         50% {
+            transform: translateX(-5px);
+         }
+         100% {
+            transform: translateX(5px);
+         }
+      }
    }
 }

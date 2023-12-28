@@ -3,14 +3,19 @@
 .app {
    background-color: #fff;
    box-shadow: 0px 0px 57px -6px rgba(0, 0, 0, 1);
-   width: clamp(400px, 60vw, 1000px);
-   border-radius: 1rem;
+   border-radius: 2rem;
    display: flex;
-   gap: 2rem;
    padding: clamp(1rem, 2vw, 2rem);
    color: $dark-slate-grey;
+   justify-content: space-between;
+   width: clamp(100px, 60vw, 1000px);
+
+   &--success {
+      width: clamp(300px, 40vw, 500px);
+   }
 
    @media (max-width: $mobile) {
+      gap: 2rem;
       position: absolute;
       top: 0;
       left: 0;
@@ -25,17 +30,16 @@
    }
 
    .mainImgContainer {
-      width: 45%;
+      width: clamp(300px, 40%, 400px);
       display: flex;
       align-items: center;
       justify-content: center;
 
-      @media (max-width:$mobile) {
+      @media (max-width: $mobile) {
          width: 100%;
       }
-   }
-
-   img {
-      width: 100%;
+      img {
+         width: 100%;
+      }
    }
 }

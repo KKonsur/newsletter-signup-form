@@ -1,0 +1,52 @@
+@import '../../variables.scss';
+
+.thanksBox {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 2rem;
+   padding: 2rem;
+
+   @media (max-width: $mobile) {
+      position: relative;
+      height: calc(100vh - 4rem);
+   }
+
+   &__imgContainer {
+      width: clamp(80px, 20vw, 100px);
+
+      @media (max-width: $mobile) {
+         margin-top: 4rem;
+      }
+
+      img {
+         width: 100%;
+      }
+   }
+
+   &__heading {
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      color: $dark-slate-grey;
+   }
+
+   &__paragraph {
+      font-size: clamp(0.7rem, 4vw, 1rem);
+   }
+
+   &__button {
+      width: 100%;
+      padding: clamp(0.8rem, 4vw, 1.2rem) 1rem;
+      border-radius: 10px;
+      font-size: clamp(0.7rem, 4vw, 1rem);
+      border: none;
+      background-color: $dark-slate-grey;
+      color: #fff;
+      cursor: pointer;
+      bottom: 0;
+
+      @media (max-width: $mobile) {
+         width: calc(100% - 4rem);
+         position: absolute;
+      }
+   }
+}

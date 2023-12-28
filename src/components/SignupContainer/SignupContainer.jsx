@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './SignupContainer.module.scss'
 import SignupForm from '../SignupForm/SignupForm'
 
-const SignupContainer = () => {
+const SignupContainer = ({ onSetData }) => {
    return (
       <section className={styles.signupContainer}>
          <div className={styles.signupTextContainer}>
@@ -14,7 +14,7 @@ const SignupContainer = () => {
                <li className={styles['signupTextContainer__listItem']}>And much more!</li>
             </ul>
          </div>
-         <SignupForm />
+         <SignupForm onSetData={onSetData} />
       </section>
    )
 }
