@@ -17,8 +17,11 @@ const SignupForm = ({ onSetData }) => {
 
    const emailValidation = () => {
       if (email.length > 0) {
-         const isValid = /^@?[a-zA-Z]+(\.[a-zA-Z]+)?$/.test(email)
-         setIsEmailValid(isValid ? false : true)
+         const isValid =
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+               email
+            )
+         setIsEmailValid(isValid)
       } else {
          setIsEmailValid(false)
       }
